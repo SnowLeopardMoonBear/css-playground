@@ -1,22 +1,47 @@
 <!DOCTYPE html>
 <html>
-  <title> placement model </title>
+  <title>placement model</title>
   <body>
     <h1>placement model test</h1>
-    <div class="float">float 1</div>
-    <div class="float">float 2</div>
-    <div class="float">float 3</div>
-    <div class="float-r">float 4</div>
+    <div class='rel'>
+      <div class="box">box1</div>
+      <div class="box">box2</div>
+      <div class="box">box3</div>
+    </div>
+    <div class='stt'>
+      <div class="box float">box4</div>
+      <div class="box float">box5</div>
+      <div class="box float">box6</div>
+    </div>
+    <div class="box rel">box7</div>
   </body>
 </html>
 <style>
-  div {
-    width: 100px;
-    height: 100px;
-    background-color: pink;
-    border: 5px solid red;
-    color: white;
+  .float{
+    float:left;
   }
-  .float{float: left;}
-  .float-r{float: right;}
+  .rel{
+    position: relative;
+    background-color: rgb(166, 222, 245);
+    margin: 10px;
+  }
+  .abs{
+    position:absolute;
+    background-color: #f7fa34 !important;
+    margin: 10px;
+  }
+  .stt{
+    position:static;
+  }
+  .box{
+    width:100px;
+    height:100px;
+    color:white;
+    font-family: "Helvetica";
+    margin: 3px;
+    padding: 3px;
+    font-size: 1.5rem;
+    background-color: lime;
+    border: solid 3px skyblue;
+  }
 </style>

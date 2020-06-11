@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <title>
+    Z-index
+  </title>
+  <body>
+    <h1>Z-index</h1>
+    <div class='a'>box1</div>
+    <div class='b'>box2</div>
+    <div class='c'>box3</div>
+  </body>
+</html>
+<style>
+  div{
+    /* position이 absolute일 때, 그 안에서 배치되는 순서와 레벨을 놓고 z-index가 발현된다 */
+    position:absolute;
+  }
+  div.a{
+    width:100px;
+    height:100px;
+    z-index:1;
+    color: white;
+    padding: 10px;
+    background-color: red;
+  }
+  div.b{
+    width:100px;
+    height:200px;
+    color: white;
+    padding: 10px;
+    background-color: orange;
+    /* 아무것도 지정되지 않으면 z-index 기본값은 0 */
+  }
+  div.c{
+    width:200px;
+    height:100px;
+    z-index:-1;
+    color: white;
+    padding: 10px;
+    background-color: greenyellow;
+  }
+</style>

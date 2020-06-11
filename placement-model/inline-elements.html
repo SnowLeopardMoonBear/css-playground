@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      .inline{
+        display:inline;
+      }
+      .block{
+        display:block;
+      }
+      div{
+        margin: 20px;
+      }
+      span{
+        font-size: 2em;
+        background-color: pink;
+      }
+      #nih1{
+        background-color: chartreuse;
+      }
+      #ih1{
+        background-color: yellow;
+        margin: 20px;
+      }
+    </style>
+  </head>
+  <title>Inline Elements</title>
+  <body>
+    <h1 id="nih1">This is an h1 element, basically not inline</h1>
+    <h1 class="inline">But with display:inline attribute,</h1>
+    <h1 id="ih1" class="inline">h1 becomes inline.</h1>
+    <div></div>
+    <span>These are span tags, </span>
+    <span>which are basically inline.</span>
+    <span class="block">But with display:block attribute, </span>
+    <span class="block">only one span element can be in a row.</span>
+  </body>
+</html>

@@ -5,12 +5,35 @@
   </title>
   <head>
     <style>
-      .ani{
+      .ani {
+        position: absolute;
         background-color: #1957ff;
+        height: 100px;
+        width: 100px;
+      }
+      .a {
+        left: 100px; 
+        animation: changhoon 2s linear infinite;
+      }
+      .b{
+        left: 220px;
+        animation: changhoon 3s linear infinite;
+      }
+      @keyframes changhoon {
+        0% {
+          top: 0px;
+        }
+        80% {
+          top: 200px;
+        }
+        to {
+          top: 300px;
+        }
       }
     </style>
   </head>
   <body>
-    <div class='ani'>Animation!</div>
+    <div class="ani a">Animation!</div>
+    <div class="ani b">Animation!</div>
   </body>
 </html>

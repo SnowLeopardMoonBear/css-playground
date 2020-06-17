@@ -112,7 +112,7 @@
         height: 40px;
         border-radius: 20px;
         opacity: 90%;
-        background-color: rgb(217, 250, 217);
+        background:linear-gradient(120deg, rgb(117, 207, 89), #5bce0f) ;
         margin: 20px;
         transition: height 1s;
       }
@@ -155,7 +155,7 @@
         color: white;
         margin-left: 10px;
         margin-top: 0px;
-        background: linear-gradient(30deg, #7bd856, rgb(150, 219, 12)) ; 
+        background: linear-gradient(30deg, #74d64e, rgb(148, 219, 6)) ; 
         text-align: left;
       }
       .input-container{
@@ -171,6 +171,8 @@
       .input-text{
         display: inline-block;
         height: 10px;
+        font-size: 12px;
+        font-weight: 600;
         width: calc(85% - 10px);
         position: absolute;
         left: 20px;
@@ -180,16 +182,18 @@
         position: absolute;
         border-radius: 5px;
         display: inline-block;
+        font-weight: 900;
         width: 50px;
         right: 10px;
         bottom: 6px;
         opacity: 0%;
         transition: opacity 1s;
         color: white;
-        background-color: #47f35e;
+        background-color: #69d411;
+        transition: background-color 0.25s;
       }
       .send:hover{
-        background-color: #2bd315;
+        background-color: #3eac28;
       }
       .card2 {
         /* background-color: #577fece7; */
@@ -261,7 +265,7 @@
           </div>
         </div>
         <div class="input-container">
-          <input class="input-text" placeholder="입력창을 클릭해 키위와 대화 시작하기"></input>
+          <input class="input-text" placeholder="입력창을 클릭해 키위와 대화를 시작해요"></input>
           <span class="send">전송</button>
         </div>
       </div>

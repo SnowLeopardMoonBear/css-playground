@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <title>BG Video</title>
+  <style>
+    .bg-video{
+      width: 100%;
+      height: 100%;
+      overflow:hidden;
+      margin: 0px auto;
+      position: relative;
+    }
+  </style>
+  <body>
+    <Video class="bg-video" muted autoplay loop>
+      <!-- 비디오 태그에서는 온라인 소스를 걸 수 없다-->
+      <source src="https://www.youtube.com/embed/36ZINdDi3tg">
+    </Video>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/36ZINdDi3tg?autoplay=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  </body>
+</html>

@@ -35,9 +35,18 @@
         border-radius: 5px;
         opacity: 85%;
         left: 10px;
+        transition: opacity 0.3s;
       }
-      .order, .register{background-color: #281af3; padding: 2px; border-radius:5px;opacity: 85%;}
-      .title:hover, .setting:hover, .order:hover, .register:hover{opacity:100%; cursor: pointer;}
+      .order, .register{
+        background-color: #281af3; 
+        padding: 2px; 
+        border-radius:5px;
+        opacity: 85%; 
+        transition: opacity 0.3s;}
+      .title:hover, .setting:hover, .order:hover, .register:hover{
+        opacity:100%; 
+        cursor: pointer;
+        }
       .setting {
         position: absolute;
         color: white;
@@ -48,8 +57,8 @@
         font-size: 25px;
         top: 7px;
         right: 10px;
+        transition: opacity 0.3s;
       }
-      /* .setting:hover{opacity:100%; cursor: pointer;} */
       .footer {
         position: fixed;
         padding: 10px;
@@ -217,11 +226,12 @@
     </div>
     <div class="card1">
       <div class="text1 margin-auto">안녕하세요! 함께하는 키오스크 키위입니다</div>
-      <div class="text2 margin-auto">식당에서 온 것 처럼 키위와 자연스럽게 대화하며 주문해보세요</div>
+      <div class="text2 margin-auto">식당 직원에게 얘기하듯이 키위와 자연스럽게 대화하며 주문해보세요</div>
       <div class="chat-container margin-auto">
         <div class="chat">
-          <div class="msg-container">키위봇
-            <div class="msg-k">안녕하세요, 어느 식당에서 주문하시겠어요?</div>
+          <div class="msg-container">
+            <img src="./kiwe-logo.png" width=30px height=30px/>
+            <div class="msg-k">안녕하세요, 어느 식당에서 주문하시겠어요? 고려대학식, 연대학식 등이 있어요 :)</div>
           </div>
         </div>
         <div class="input-container">

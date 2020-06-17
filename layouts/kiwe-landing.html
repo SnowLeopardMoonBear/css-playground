@@ -81,12 +81,14 @@
         opacity: 100%;
       }
       .text1 {
+        max-width: 800px;
         margin-top: 50px;
         font-size: 30px;
         font-weight: 600;
         color: white;
       }
       .text2 {
+        max-width: 800px;
         margin-top: 20px;
         font-size: 20px;
         font-weight: 400;
@@ -95,13 +97,12 @@
       .chat-container{
         position: relative;
         width: 70%;
+        max-width: 600px;
         height: 40px;
         border-radius: 20px;
         opacity: 90%;
         background-color: rgb(217, 250, 217);
         margin: 20px;
-        margin-left: auto;
-        margin-right: auto;
         transition: height 1s;
       }
       .chat-container:hover{
@@ -180,7 +181,7 @@
         background-color: #2bd315;
       }
       .card2 {
-        background-color: #8fadff;
+        background-color: #577fece7;
         position: relative;
         width: calc(100vw - 100px);
         height: 600px;
@@ -191,11 +192,15 @@
         transition: background-color 1s;
       }
       .card2:hover{
-        background-color: #95b0f8f3;
+        background-color: #577fecff;
       }
       .right{
         float:right;
         margin-right: 20px;
+      }
+      .margin-auto{
+        margin-left: auto;
+        margin-right: auto;
       }
     </style>
   </head>
@@ -211,9 +216,9 @@
       </div>
     </div>
     <div class="card1">
-      <div class="text1">안녕하세요! 함께하는 키오스크 키위입니다</div>
-      <div class="text2">식당에서 온 것 처럼 키위와 자연스럽게 대화하며 주문해보세요</div>
-      <div class="chat-container">
+      <div class="text1 margin-auto">안녕하세요! 함께하는 키오스크 키위입니다</div>
+      <div class="text2 margin-auto">식당에서 온 것 처럼 키위와 자연스럽게 대화하며 주문해보세요</div>
+      <div class="chat-container margin-auto">
         <div class="chat">
           <div class="msg-container">키위봇
             <div class="msg-k">안녕하세요, 어느 식당에서 주문하시겠어요?</div>

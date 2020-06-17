@@ -11,13 +11,26 @@
         background-color: rgb(255, 200, 97);
         height: 300px;
         position: relative;
+        overflow: hidden;
       }
+
       .box1:hover > .box2 {
-        background-color: rgb(226, 55, 226);
+        background-color: rgb(255, 220, 255);
         height: 30px;
         width: 80px;
-        margin: 10px;
         bottom: 0px;
+      }
+
+      .box1:hover > .chatwindow{
+        display: block;
+        background-color: rgb(227, 253, 235);
+        height: 230px;
+        position: relative;
+        margin: auto;
+        margin-top: 10px;
+        opacity: 1;
+        z-index: 1;
+        transition: opacity 1s;
       }
 
       .box2:focus{
@@ -35,7 +48,7 @@
         background-color: rgb(81, 81, 190);
         transition: background-color 1s, height 1s;
       }
-      
+
       .box2 {
         position: absolute;
         height: 30px;
@@ -44,14 +57,24 @@
         bottom: 0px;
         margin-left: 20px;
         margin-right: 20px;
-        background-color: rgb(128, 241, 128);
+        background-color: rgb(229, 253, 229);
+        z-index: 2;
         transition: background-color 0.5s, position 1s;
+      }
+
+      .chatwindow{
+        display: hidden;
+        width: 100px;
+        height: 50px;
+        opacity: 0;
+        background-color: rgb(97,255,150);
       }
     </style>
   </head>
   <body>
 
       <div class="box1">
+        <div class="chatwindow">채팅 영역</div>
         <input class="box2"></div>
       </div>
   </body>

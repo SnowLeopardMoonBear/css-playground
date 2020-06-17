@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <title>Transition Basic</title>
+  <head>
+    <meta charset="utf-8" />
+    <style>
+      div {
+        display: table;
+        height: 200px;
+        width: 200px;
+        padding: 10px;
+        color: white;
+        font-family: "Helvetica";
+        vertical-align: middle;
+        background-color: #1957ff;
+      }
+      .trans1 {
+        transition: width 1s, height 2s;
+      }
+      .trans2 {
+        transition: width 0.5s, height 2s, background-color 3s;
+      }
+      .trans1:active {
+        height: 400px;
+        width: 500px;
+        background-color: #c850ff;
+      }
+      .trans2:hover {
+        height: 400px;
+        width: 500px;
+        background-color: #8df862
+      }
+      .inner-text {
+        display: table-cell;
+        vertical-align: middle;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="trans1">
+      <span class="inner-text">
+        transition은 상당히 부드럽게 움직입니다. 보통은 animation보다 자연스러운
+        듯? 특정 속성만 transition에 넣어 부드럽게 움직이도록 만들 수 있습니다!
+      </span>
+    </div>
+    <div class="trans2">
+      <span class="inner-text">
+        두번째 트랜지션입니다. hover시 발동됩니다
+      </span>
+    </div>
+  </body>
+</html>

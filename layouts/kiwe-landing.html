@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html>
+  <title>
+    KiWE landing tutorial
+  </title>
+  <head>
+    <meta charset="utf-8" />
+    <style>
+      * {
+        font-family: "Helvetica";
+      }
+      body {
+        margin: 0px;
+        background-color: #f3f3f3;
+      }
+      .header {
+        position: fixed;
+        top: 0px;
+        height: 50px;
+        width: 100%;
+        background: linear-gradient(30deg, #e3f789, #37c94a);
+        opacity: 95%;
+        vertical-align: middle;
+        z-index: 1;
+      }
+      .title {
+        display: inline-block;
+        position: relative;
+        background: linear-gradient(120deg, rgb(28, 194, 116), #68f328);
+        color: white;
+        font-size: 30px;
+        font-weight: 800;
+        margin: 5px;
+        padding: 3px;
+        border-radius: 5px;
+        opacity: 85%;
+        left: 10px;
+      }
+      .order, .register{background-color: #281af3; padding: 2px; border-radius:5px;opacity: 85%;}
+      .title:hover, .setting:hover, .order:hover, .register:hover{opacity:100%; cursor: pointer;}
+      .setting {
+        position: absolute;
+        color: white;
+        background-color: #00000022;
+        opacity: 85%;
+        padding: 3px 5px 3px 5px ;
+        border-radius: 5px;
+        font-size: 25px;
+        top: 7px;
+        right: 10px;
+      }
+      /* .setting:hover{opacity:100%; cursor: pointer;} */
+      .footer {
+        position: fixed;
+        padding: 10px;
+        width: 100%;
+        bottom: 0px;
+        background-color: rgba(25, 80, 219, 0.733);
+        color: white;
+        font-size: 20px;
+        z-index: 1;
+      }
+      .card1 {
+        position: relative;
+        width: calc(100vw - 40px);
+        /* background-color: #2bc45e; */
+        background: url("./bg1.jpg") no-repeat;
+        background-size: 100% 800px;
+        overflow: hidden;
+        /* height: 500px; */
+        /* top: 50px; */
+        padding: 20px;
+        margin-top: 00px;
+        color: black;
+        text-align: center;
+        vertical-align: middle;
+        opacity: 90%;
+        transition: opacity 1s;
+      }
+      .card1:hover {
+        opacity: 100%;
+      }
+      .text1 {
+        margin-top: 50px;
+        font-size: 30px;
+        font-weight: 600;
+        color: white;
+      }
+      .text2 {
+        margin-top: 20px;
+        font-size: 20px;
+        font-weight: 400;
+        color: white;
+      }
+      .chat-container{
+        position: relative;
+        width: 70%;
+        height: 40px;
+        border-radius: 20px;
+        opacity: 90%;
+        background-color: rgb(217, 250, 217);
+        margin: 20px;
+        margin-left: auto;
+        margin-right: auto;
+        transition: height 1s;
+      }
+      .chat-container:hover{
+        height: 500px;
+      }
+      .chat-container:hover .send{
+        opacity: 100%;
+      }
+      .chat-container:hover .chat{
+        height: 440px;
+        opacity: 100%;
+      }
+      .chat{
+        position: absolute;
+        background-color: white;
+        height: 0px;
+        width: 96%;
+        margin-top: 10px;
+        margin-left: 2%;
+        margin-right: 2%;
+        overflow: hidden;
+        opacity: 0%;
+        border-radius: 15px;
+        text-align:left;
+        transition: height 0.9s, opacity 1s;
+      }
+      .msg-container{
+        display: table;
+        width: 100%;
+        padding: 15px;
+        color: rgba(0, 0, 0, 0.801);
+        vertical-align: middle;
+      }
+      .msg-k{
+        display:inline-block;
+        width: 200px;
+        border-radius: 10px;
+        padding: 5px;
+        color: white;
+        margin-left: 10px;
+        margin-top: 0px;
+        background: linear-gradient(30deg, #7bd856, rgb(150, 219, 12)) ; 
+        text-align: left;
+      }
+      .input-container{
+        position: absolute;
+        background-color: white;
+        height: 30px;
+        width: 98%;
+        margin-left: 1%;
+        margin-right: 1%;
+        border-radius: 15px;
+        bottom: 5px;
+      }
+      .input-text{
+        display: inline-block;
+        height: 10px;
+        width: calc(85% - 10px);
+        position: absolute;
+        left: 20px;
+        bottom: 6px;
+      }
+      .send{
+        position: absolute;
+        border-radius: 5px;
+        display: inline-block;
+        width: 50px;
+        right: 10px;
+        bottom: 6px;
+        opacity: 0%;
+        transition: opacity 1s;
+        color: white;
+        background-color: #47f35e;
+      }
+      .send:hover{
+        background-color: #2bd315;
+      }
+      .card2 {
+        background-color: #8fadff;
+        position: relative;
+        width: calc(100vw - 100px);
+        height: 600px;
+        padding: 50px;
+        color: black;
+        text-align: center;
+        vertical-align: middle;
+        transition: background-color 1s;
+      }
+      .card2:hover{
+        background-color: #95b0f8f3;
+      }
+      .right{
+        float:right;
+        margin-right: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="header">
+      <div class="title">KiWE</div>
+      <div가 class="setting">설정</div>
+    </div>
+    <div class="footer">
+      <span class="order"><strong>지금 주문하러 가기</strong></span>
+      <div class="right">아직 회원이 아니세요?
+        <span class="register"><strong>회원가입</strong></span>
+      </div>
+    </div>
+    <div class="card1">
+      <div class="text1">안녕하세요! 함께하는 키오스크 키위입니다</div>
+      <div class="text2">식당에서 온 것 처럼 키위와 자연스럽게 대화하며 주문해보세요</div>
+      <div class="chat-container">
+        <div class="chat">
+          <div class="msg-container">키위봇
+            <div class="msg-k">안녕하세요, 어느 식당에서 주문하시겠어요?</div>
+          </div>
+        </div>
+        <div class="input-container">
+          <input class="input-text"></input>
+          <span class="send">전송</button>
+        </div>
+      </div>
+    </div>
+    <div class="card2">
+      <div class="text1">키위, 그 두 번째 이야기</div>
+      <div class="text2">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+    </div>
+  </body>
+</html>

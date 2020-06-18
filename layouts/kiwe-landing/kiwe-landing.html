@@ -34,38 +34,37 @@
         margin: 5px;
         padding: 3px;
         border-radius: 5px;
-        opacity: 85%;
         left: 10px;
-        transition: opacity 0.3s;
+        opacity: 100%;
+        box-shadow: 2px 3px 5px rgba(0, 0, 0, 0.08) ;
       }
-      .order, .register{
-        background-color: #281af3; 
-        padding: 2px; 
-        border-radius:5px;
-        opacity: 85%; 
-        transition: opacity 0.3s;}
-      .title:hover, .setting:hover, .order:hover, .register:hover{
-        opacity:100%; 
-        cursor: pointer;
-        }
+      .title:hover{background: linear-gradient(120deg, rgb(2, 194, 104), #4be902);}
       .setting {
         position: absolute;
         color: white;
-        background-color: #00000022;
-        opacity: 85%;
         padding: 3px 5px 3px 5px ;
         border-radius: 5px;
         font-size: 25px;
         top: 7px;
         right: 10px;
-        transition: opacity 0.3s;
+        /* box-shadow: 2px 3px 5px rgba(0, 0, 0, 0.08) ; */
+        transition: background-color 0.3s;
       }
+      .order, .register{
+        padding: 2px 5px 2px 5px; 
+        border-radius:5px; 
+        box-shadow: 2px 3px 5px rgba(0, 0, 0, 0.08) ;
+        transition: background-color 0.3s;}
+      .title:hover, .setting:hover, .order:hover, .register:hover{
+        background-color: #00000030;
+        cursor: pointer;
+        }
       .footer {
         position: fixed;
         padding: 10px;
         width: 100%;
         bottom: 0px;
-        background-color: rgba(25, 80, 219, 0.733);
+        background-color: rgba(25, 80, 219, 0.95);
         color: white;
         box-shadow: -2px -3px 5px rgba(0, 0, 0, 0.16);
         font-size: 20px;
@@ -155,7 +154,8 @@
         color: white;
         margin-left: 10px;
         margin-top: 0px;
-        background: linear-gradient(30deg, #74d64e, rgb(148, 219, 6)) ; 
+        background: linear-gradient(30deg, #4ed670, rgb(84, 219, 6)) ;
+        box-shadow: 2px 3px 5px rgba(0, 0, 0, 0.12) ; 
         text-align: left;
       }
       .input-container{
@@ -170,22 +170,23 @@
       }
       .input-text{
         display: inline-block;
-        height: 10px;
-        font-size: 12px;
+        height: 16px;
+        font-size: 16px;
         font-weight: 600;
         width: calc(85% - 10px);
         position: absolute;
         left: 20px;
-        bottom: 6px;
+        bottom: 4px;
       }
       .send{
         position: absolute;
         border-radius: 5px;
         display: inline-block;
+        font-size: 20px;
         font-weight: 900;
         width: 50px;
         right: 10px;
-        bottom: 6px;
+        bottom: 3px;
         opacity: 0%;
         transition: opacity 1s;
         color: white;
@@ -234,6 +235,7 @@
         max-width: 800px;
         box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.212) ;
       }
+      .inset{box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.25) inset;}
       .whitebox{
         width: 70px;
         height: 70px;
@@ -257,14 +259,14 @@
     <div class="card1">
       <div class="text1 margin-auto">안녕하세요! 함께하는 키오스크 키위입니다</div>
       <div class="text2 margin-auto">불편한 키오스크는 이젠 안녕! <br> 키위와 대화하면서 원하는 음식을 쉽게 주문할 수 있어요. 식당 직원과 얘기하듯이요.</div>
-      <div class="chat-container margin-auto">
-        <div class="chat">
+      <div class="chat-container margin-auto black">
+        <div class="chat inset">
           <div class="msg-container">
             <img src="./kiwe-logo.png" width=30px height=30px/>
             <div class="msg-k">안녕하세요, 저는 키위봇이에요. 어느 식당에서 주문하시겠어요? 근처에 고려대 학생식당, 버거킹 안암점이 있어요 :)</div>
           </div>
         </div>
-        <div class="input-container">
+        <div class="input-container inset">
           <input class="input-text" placeholder="입력창을 클릭해 키위와 대화를 시작해요"></input>
           <span class="send">전송</button>
         </div>

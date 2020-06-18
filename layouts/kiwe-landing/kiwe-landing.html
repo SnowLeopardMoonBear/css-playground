@@ -111,6 +111,7 @@
         height: 40px;
         border-radius: 20px;
         opacity: 90%;
+        overflow-y: scroll;
         background:linear-gradient(120deg, rgb(117, 207, 89), #5bce0f) ;
         margin: 20px;
         transition: height 1s;
@@ -122,42 +123,66 @@
         opacity: 100%;
       }
       .chat-container:hover .chat{
-        height: 440px;
+        height: 420px;
         opacity: 100%;
       }
       .chat{
         position: absolute;
         background-color: white;
         height: 0px;
-        width: 96%;
+        width: calc(96% - 20px);
         margin-top: 10px;
         margin-left: 2%;
         margin-right: 2%;
-        overflow: hidden;
+        padding: 10px;
+        overflow-y: scroll;
         opacity: 0%;
         border-radius: 15px;
         text-align:left;
         transition: height 0.9s, opacity 1s;
       }
       .msg-container{
-        display: table;
-        width: 100%;
-        padding: 15px;
+        display: relative;
+        width: calc(100% - 30);
+        min-height: 30px;
+        padding: 5px;
         color: rgba(0, 0, 0, 0.801);
         vertical-align: middle;
       }
-      .msg-k{
+      .msg{
         display:inline-block;
-        width: 200px;
+        max-width: 200px;
         border-radius: 10px;
         padding: 5px;
         color: white;
-        margin-left: 10px;
         margin-top: 0px;
-        background: linear-gradient(30deg, #4ed670, rgb(84, 219, 6)) ;
         box-shadow: 2px 3px 5px rgba(0, 0, 0, 0.12) ; 
+      }
+      .kiwe{
+        margin-left: 10px;
+        background: linear-gradient(30deg, #4ed670, rgb(84, 219, 6)) ;
         text-align: left;
       }
+      .user{
+        float: right;
+        margin-right: 10px;
+        background: linear-gradient(30deg, #c2d64e, rgb(219, 215, 6)) ;
+        text-align: right;
+      }
+      .kakao{
+        display:block;
+        color: rgb(130, 130, 130);
+        font-size: 25px;
+        font-weight: 900;
+        margin-top: 10px;
+        text-align: center;
+        width: calc(100% - 50);
+        background-color: #ffe600;
+        border-radius: 10px;
+        box-shadow: 2px 3px 5px rgba(0, 0, 0, 0.12) ;
+        transition: 0.3s; 
+      }
+      .kakao:hover{background-color: #ffee00; cursor: pointer; color: rgb(100, 100, 100);}
       .input-container{
         position: absolute;
         background-color: white;
@@ -263,7 +288,38 @@
         <div class="chat inset">
           <div class="msg-container">
             <img src="./kiwe-logo.png" width=30px height=30px/>
-            <div class="msg-k">안녕하세요, 저는 키위봇이에요. 어느 식당에서 주문하시겠어요? 근처에 고려대 학생식당, 버거킹 안암점이 있어요 :)</div>
+            <div class="msg kiwe">안녕하세요, 저는 키위봇이에요. 어느 식당에서 주문하시겠어요? 근처에 고려대 학생식당, 버거킹 안암점이 있어요 :)</div>
+          </div>
+          <div class="msg-container">
+            <div class="msg user">고대 학식</div>
+          </div>
+          <div class="msg-container">
+            <img src="./kiwe-logo.png" width=30px height=30px/>
+            <div class="msg kiwe">무엇을 드시고 싶으세요? 지금 데리야키치킨덮밥 행사중이라 30% 할인 가능하세요</div>
+          </div>
+          <div class="msg-container">
+            <div class="msg user">ㄷㄹㅇㅋ 1</div>
+          </div>
+          <div class="msg-container">
+            <img src="./kiwe-logo.png" width=30px height=30px/>
+            <div class="msg kiwe">음료나 사이드 필요하세요?</div>
+          </div>
+          <div class="msg-container">
+            <div class="msg user">괜찮아요</div>
+          </div>
+          <div class="msg-container">
+            <img src="./kiwe-logo.png" width=30px height=30px/>
+            <div class="msg kiwe">네, 데리야키치킨덮밥 하나 결제 도와드리겠습니다. 카카오페이, 토스 중 어떤 걸로 해드릴까요?</div>
+          </div>
+          <div class="msg-container">
+            <div class="msg user">ㅋㅋㅇ</div>
+          </div>
+          <div class="msg-container">
+            <img src="./kiwe-logo.png" width=30px height=30px/>
+            <div class="msg kiwe">카카오페이로 결제해드릴게요. 아래의 결제버튼을 클릭해주세요 :D </div>
+          </div>
+          <div class="msg-container">
+            <div class="kakao margin-auto">카카오페이로 3,800원 결제하기</div>
           </div>
         </div>
         <div class="input-container inset">

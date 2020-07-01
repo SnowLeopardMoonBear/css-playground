@@ -1,0 +1,58 @@
+.app {
+  display: block;
+  font-size: 1rem;
+  border: 0px;
+  height: calc(90vw + 12px);
+  width: calc(90vw + 12px);
+  margin-left: auto;
+  margin-right: auto;
+}
+.square {
+  display: flex;
+  height: calc(10vw - 4px);
+  width: calc(10vw - 4px);
+  border: 2px solid pink;
+  margin: 0px 0px 0px 0px;
+  align-items: center;
+  /* align-items: center가 flex 안에 있어야 수직정렬이 가능*/
+  justify-content: center;
+  /* justify-content: center는 글이 들어가는 박스를 수평정렬 */
+  text-align: center;
+  /* text-align까지 있어야 글 박스 내에서도 수평정렬이 완성*/
+}
+.nine {
+  display: flex;
+  flex-wrap: wrap;
+  float: left;
+  height: 30vw;
+  width: 30vw;
+  border: 2px solid pink;
+  margin: 0px 0px 0px 0px;
+}
+.title {
+  font-size: 3rem;
+  text-align: center;
+}
+.center {
+  background-color: #f7a4db;
+}
+.real-center{
+  background-color: #f36cd1;
+}
+.header{
+  position: static;
+  display: flex;
+  flex-grow: 1 4 1;
+  align-items: center;
+  justify-content: space-between;
+  height: 50px;
+  width: 100%;
+  color: white;
+  background-color: rgb(70, 21, 206);
+  display: flex;
+}
+.header div{
+  background-color: pink;
+  margin: 5px;
+  border-radius: 5px;
+}
